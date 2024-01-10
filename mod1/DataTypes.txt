@@ -1,0 +1,165 @@
+Intro to Cpp
+
+Interger Data Types
+Interger vars can hold a whole numbers such as 12, 7, and -99
+
+NOTE: A Long is more preses the a double when it comes to the values after the decimal
+
+Data Types
+short int               2bytes      -32,768 to 32,767
+unsignes short int      2bytes      0 to 65,535
+int                     4bytes      -2,147,483,648 to 2,147,483,647
+unsigned int            4bytes      0 to 4,294,967,295
+long int                4bytes      -2,147,483,648 to 2,147,483,647
+unsigned long int       4bytes      0 to 4,294,967,295
+long long int           8bytes      -9,223,372,036,854,755,808 to 9,223,372,036,854,775,807
+unsigned long long int  8bytes      0 to 18,446,744,073,709,551,615
+
+Character Strings
+A series of characters in consecutive memory locations:
+  "Hello"
+Stored with the null terminator, \0, at the end:
+Comprised of the characters between the " "
+      'H e l l o \0'
+
+The C++ string Class
+Special data type supports working with strings
+  #include <string>
+Can define string variables in programs:
+  string firstName, lastName;
+Can receive values with assignment operator:
+  firstName = "George";
+  lastName  = "Washington";
+Can be displayed via cout
+  cout << firstName << " " << lastName;
+
+Floating-Point Data Types
+The floating-point data types are:
+  float
+  double
+  long double
+They can hold real numbers such as:
+  12.45 -3.8
+Stored in a form similar to scientific notation
+All floating-point numbers are signed
+
+Data Types 
+Single precision              float     4bytes    Numbers between [3.4e-32]  and [3.4e38]
+Double precision             double     8bytes    Numbers between [1.7e-308] and [1.7e308]
+Long Double precision   long double*    8bytes    Numbers between [1.7e-308] and [1.7e308]
+
+Floating-Point Literals
+Can be represented in
+  Fixed point (decimal) notation:
+    31.4159 0.0000625
+  E notation:
+    3.14159E1 6.25e-5
+Are double by default
+Can be forced to be float (3.14159f) or
+long double (0.0000625L)
+
+The bool Data Type
+Represents values that are 'true' or 'false'
+bool variables are stored as small integers
+'false' is represented by 0, true by 1:
+  bool allDone = true;
+  bool finished = false;
+
+Determining the Size of a Data Type
+The sizeof operator gives the size of any data
+type or variable:
+    double amount;
+    cout << "A double is stored in "
+         << sizeof(double) << "bytes\n";
+    cout << "Variable amount is stored in "
+         << sizeof(amount)
+         << "bytes\n";
+
+Variable Assignments and Initialization
+An assignment statement uses the =
+operator to store a value in a variable.
+  item = 12;
+This statement assigns the value 12 to the
+'item' variable.
+
+Assignment
+The variable receiving the value must
+appear on the left side of the = operator.
+This will NOT work:
+  // ERROR!
+  12 = item;
+
+Variable Initialization
+To initialize a variable means to assign it a
+value when it is defined:
+  int length = 12;
+Can initialize some or all variables:
+  int length = 12, width = 5, area;
+
+Declaring Variables With the auto Key Word
+C++ 11 introduces an alternative way to define variables,
+using the auto key word and an initialization value. Here
+is an example:
+  auto amount = 100; <----------- int
+The 'auto' key word tells the compiler to determine the
+variable’s data type from the initialization value.
+  auto interestRate= 12.0; <---------- double
+  auto stockCode = 'D'; <------------- char
+  auto customerNum = 459L; <---------- long
+
+Scope
+The scope is where the variable is being defined.
+You have two different types; you have the local and the global.
+example of a local
+void localScope() {
+  int x = 25;
+  std::cout << x << std::endl;
+}
+
+int main() {
+  localScope();
+  return 0;
+}
+
+As you can the var x can not be accssed from the main function. It can only be accessed in side
+of the localScope.
+
+example of global var
+int x = 25;
+
+void globalScope() {
+  std::cout << x << std::endl;
+}
+
+int main() {
+  std::cout << x << std::endl;
+  return 0;
+}
+
+As you can see x can be accessed from anywhere.
+
+Arithmetic Operators
+Used for performing numeric calculations
+C++ has unary, binary, and ternary
+operators:
+  unary (1 operand) -5
+  binary (2 operands) 13 - 7
+  ternary (3 operands) exp1 ? exp2 : exp3
+
+Binary Arithmetic Operators
+SYMBOL OPERATION       EXAMPLE     VALUE OF
+  +     addition      ans = 7 + 3;   10
+  -    subtraction    ans = 7 - 3;    4
+  *    multiplication ans = 7 * 3;   21
+  /    division       ans = 7 / 3;    2
+  %    modulus        ans = 7 % 3;    1
+
+Named Constants
+Named constant (constant variable):
+variable whose content cannot be
+changed during program execution
+Used for representing constant values with
+descriptive names:
+  const double TAX_RATE = 0.0675;
+  const int NUM_STATES = 50;
+Often named in uppercase letters
