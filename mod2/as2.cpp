@@ -1,31 +1,7 @@
-/*
-
-Connor Harris
-COP 2000
-02/02/2024
-
-A Theater you are opening needs a program to calculate how much income was
-generated from each sales of different box office seats. The program should ask
-the user for the number of each type of box office seat sold for the night and
-then output the total for each type of seat and the overall total. There are
-five types of seats, Balcony, Grand Tier, Loge, Mezzanine, and Orchestra.
-
-The pricing is as follows:
-Balcony: $50.00
-Grand Tier: $175.25
-Loge: $125.00
-Mezzanine: $100.00
-Orchestra: $230.50
-
-have x := the amount of seats sold
-then times x to 50 to find how much money was made.
-
-*/
-
 #include <iostream>
 
 int main() {
-  int x = 0;
+  float x = 0;
 
   float mezzanine = 100;
   float balcony = 50;

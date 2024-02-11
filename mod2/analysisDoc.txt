@@ -1,0 +1,75 @@
+Problem Statement:
+A Theater you are opening needs a program to calculate how much income was
+generated from each sales of different box office seats. The program should ask
+the user for the number of each type of box office seat sold for the night and
+then output the total for each type of seat and the overall total. There are
+five types of seats, Balcony, Grand Tier, Loge, Mezzanine, and Orchestra.
+
+The pricing is as follows:
+Balcony: $50.00
+Grand Tier: $175.25
+Loge: $125.00
+Mezzanine: $100.00
+Orchestra: $230.50
+
+Variable List:
+Identifier   | Description                           | Data Type | Source          | Usage       
+-------------|---------------------------------------|-----------|-----------------|-------------
+x            | Temporary variable for seat count input | float     | User input      | Calculation 
+mezzanine    | Cost per seat for mezzanine seating   | float     | Hardcoded value | Calculation 
+balcony      | Cost per seat for balcony seating     | float     | Hardcoded value | Calculation 
+loge         | Cost per seat for loge seating        | float     | Hardcoded value | Calculation 
+grandTier    | Cost per seat for grand tier seating | float     | Hardcoded value | Calculation 
+orchestra    | Cost per seat for orchestra seating   | float     | Hardcoded value | Calculation 
+total        | Total sales amount                    | float     | Calculation     | Output      
+
+Algorithum:
+1. Start
+2. Declare and initialize variables:
+   - x (temporary variable for seat count input) as float
+   - mezzanine (cost per seat for mezzanine seating) as float, initialized with 100
+   - balcony (cost per seat for balcony seating) as float, initialized with 50
+   - loge (cost per seat for loge seating) as float, initialized with 125
+   - grandTier (cost per seat for grand tier seating) as float, initialized with 175.25
+   - orchestra (cost per seat for orchestra seating) as float, initialized with 230.50
+   - total (total sales amount) as float
+   
+3. Prompt the user for the number of seats sold for each seating type:
+   a. Prompt for balcony seating count and store in x
+   b. Prompt for grand tier seating count and store in x
+   c. Prompt for loge seating count and store in x
+   d. Prompt for mezzanine seating count and store in x
+   e. Prompt for orchestra seating count and store in x
+
+4. Calculate the total sales for each seating type:
+   a. Multiply the number of seats sold for each seating type by its respective cost per seat
+   b. Assign the result to the respective seating type variable (balcony, grandTier, loge, mezzanine, orchestra)
+
+5. Display the total sales for each seating type and the overall total sales:
+   a. Display "WallStreet Theater Ticket Sales"
+   b. Display "-------------------------------"
+   c. Display "Balcony:     $" followed by the value of balcony
+   d. Display "Grand Tier:  $" followed by the value of grandTier
+   e. Display "Loge:        $" followed by the value of loge
+   f. Display "Mezzanine:   $" followed by the value of mezzanine
+   g. Display "Orchestra:   $" followed by the value of orchestra
+   h. Calculate the total sales by summing up the values of balcony, grandTier, loge, mezzanine, and orchestra
+   i. Display "Total Sales: $" followed by the value of total
+
+6. End
+
+Data Tracing Chart:
+| Step | x    | mezzanine | balcony | loge | grandTier | orchestra | total |
+|------|------|-----------|---------|------|-----------|-----------|-------|
+| 1    | N/A  | 100       | 50      | 125  | 175.25    | 230.50    | N/A   |
+| 2    | N/A  | N/A       | N/A     | N/A  | N/A       | N/A       | N/A   |
+| 3    | 10   | N/A       | N/A     | N/A  | N/A       | N/A       | N/A   |
+| 4    | N/A  | N/A       | 500     | N/A  | N/A       | N/A       | N/A   |
+| 5    | 15   | N/A       | N/A     | N/A  | N/A       | N/A       | N/A   |
+| 6    | N/A  | N/A       | N/A     | N/A  | 2637.75   | N/A       | N/A   |
+| 7    | 8    | N/A       | N/A     | N/A  | N/A       | N/A       | N/A   |
+| 8    | N/A  | N/A       | N/A     | 1000 | N/A       | N/A       | N/A   |
+| 9    | 20   | N/A       | N/A     | N/A  | N/A       | N/A       | N/A   |
+| 10   | N/A  | N/A       | N/A     | N/A  | N/A       | N/A       | N/A   |
+| 11   | N/A  | N/A       | N/A     | N/A  | N/A       | N/A       | 8903.75 |
+
